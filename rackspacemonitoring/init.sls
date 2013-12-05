@@ -1,4 +1,4 @@
-rackspace-package:
+rackspace-monitoring-agent:
   pkgrepo.managed:
     - humanname: Rackspace Monitoring
     - name: deb http://stable.packages.cloudmonitoring.rackspace.com/{grains['os'].lower()}-{grains['osrelease']}-x86_64 cloudmonitoring main
