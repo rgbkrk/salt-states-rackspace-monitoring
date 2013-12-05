@@ -1,4 +1,4 @@
-base:
+rackspace-package:
   {% if grains['os'] == 'Ubuntu' or grains['os'] == 'Debian' %}
   pkgrepo.managed:
     - humanname: Rackspace Monitoring
