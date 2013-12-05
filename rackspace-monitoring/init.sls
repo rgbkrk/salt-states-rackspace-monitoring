@@ -15,3 +15,17 @@ rackspace-package:
   pkg.latest:
     - name: rackspace-monitoring-agent
     - refresh: True
+
+{% if pillar['rackspace_username'] %}
+rackspace-configure:
+  cmd.run:
+    - name: "rackspace-monitoring-agent --username '{{ pillar['rackspace_username'] }}' --apikey '{{ pillar['rackspace_api_key'] }}' --setup"
+
+rackspace-monitoring-agent:
+  service:
+    - running
+    - enable: True
+    - reload: True
+    - watch:
+      - file: /etc/rackspace-monitoring-agent.cfg
+{% endif %}
