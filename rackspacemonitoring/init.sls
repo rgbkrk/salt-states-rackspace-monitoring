@@ -6,3 +6,7 @@ rackspace-package:
     - key_url: https://monitoring.api.rackspacecloud.com/pki/agent/linux.asc
     - require_in:
       - pkg: rackspace-monitoring-agent
+
+  pkg.latest:
+    - name: rackspace-monitoring-agent
+    - refresh: True
