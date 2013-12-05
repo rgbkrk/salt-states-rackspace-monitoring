@@ -1,3 +1,3 @@
 base:
   '*':
-    - rackspace-monitoring
+    - rackspacemonitoring
