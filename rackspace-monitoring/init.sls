@@ -1,3 +1,6 @@
+python-apt:
+  pkg.installed
+
 rackspace-package:
   pkgrepo.managed:
     - humanname: Rackspace Monitoring
@@ -26,6 +29,4 @@ rackspace-monitoring-agent:
     - running
     - enable: True
     - reload: True
-    - watch:
-      - file: /etc/rackspace-monitoring-agent.cfg
 {% endif %}
