@@ -29,6 +29,4 @@ rackspace-monitoring-agent:
     - running
     - enable: True
     - reload: True
-    - watch:
-      - file: /etc/rackspace-monitoring-agent.cfg
 {% endif %}
