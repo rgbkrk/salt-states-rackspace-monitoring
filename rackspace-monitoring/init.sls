@@ -1,3 +1,6 @@
+python-apt:
+  pkg.installed
+
 rackspace-package:
   pkgrepo.managed:
     - humanname: Rackspace Monitoring
