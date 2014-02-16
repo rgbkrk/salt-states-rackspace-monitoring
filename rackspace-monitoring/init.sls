@@ -23,6 +23,7 @@ rackspace-package:
 rackspace-configure:
   cmd.run:
     - name: "rackspace-monitoring-agent --username '{{ pillar['rackspace_username'] }}' --apikey '{{ pillar['rackspace_api_key'] }}' --setup"
+    - unless: ls /etc/rackspace-monitoring-agent.cfg
 
 rackspace-monitoring-agent:
   service:
